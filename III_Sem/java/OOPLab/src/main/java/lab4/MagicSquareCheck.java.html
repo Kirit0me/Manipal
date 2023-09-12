@@ -1,0 +1,56 @@
+<!-- Generator: GNU source-highlight 3.1.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><i><font color="#9A1900">/*</font></i>
+<i><font color="#9A1900"> * Click </font></i><u><font color="#0000FF">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</font></u><i><font color="#9A1900"> to change this license</font></i>
+<i><font color="#9A1900"> * Click </font></i><u><font color="#0000FF">nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java</font></u><i><font color="#9A1900"> to edit this template</font></i>
+<i><font color="#9A1900"> */</font></i>
+<b><font color="#000080">package</font></b> lab4<font color="#990000">;</font>
+
+<b><font color="#000080">import</font></b> java<font color="#990000">.</font>util<font color="#990000">.</font>Scanner<font color="#990000">;</font>
+
+<i><font color="#9A1900">/**</font></i>
+<i><font color="#9A1900"> *</font></i>
+<i><font color="#9A1900"> * </font></i><font color="#009900">@author</font><i><font color="#9A1900"> student</font></i>
+<i><font color="#9A1900"> */</font></i>
+<b><font color="#0000FF">public</font></b> <b><font color="#0000FF">class</font></b> <font color="#008080">MagicSquareCheck</font> <font color="#FF0000">{</font>
+    <b><font color="#0000FF">public</font></b> <b><font color="#0000FF">static</font></b> <font color="#009900">void</font> <b><font color="#000000">main</font></b><font color="#990000">(</font>String<font color="#990000">[]</font> args<font color="#990000">)</font> <font color="#FF0000">{</font>
+        <font color="#008080">Scanner</font> sc <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <b><font color="#000000">Scanner</font></b><font color="#990000">(</font>System<font color="#990000">.</font>in<font color="#990000">);</font>
+        System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Enter number of elements in array : "</font><font color="#990000">);</font>
+        <font color="#009900">int</font> M <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+        <font color="#009900">int</font> mat<font color="#990000">[][]</font> <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">int</font><font color="#990000">[</font>M<font color="#990000">][</font>M<font color="#990000">];</font>
+        System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Enter elements of array : "</font><font color="#990000">);</font>
+        <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> M<font color="#990000">;</font> i<font color="#990000">++)</font><font color="#FF0000">{</font>
+            <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> j <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> j <font color="#990000">&lt;</font> M<font color="#990000">;</font> j<font color="#990000">++)</font><font color="#FF0000">{</font>
+                mat<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">]</font> <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+            <font color="#FF0000">}</font>
+        <font color="#FF0000">}</font>
+        <font color="#009900">boolean</font> flag <font color="#990000">=</font> <b><font color="#0000FF">false</font></b><font color="#990000">;</font>
+      
+        <font color="#009900">int</font> sum1 <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">,</font>sum2<font color="#990000">=</font><font color="#993399">0</font><font color="#990000">;</font>
+
+        <b><font color="#0000FF">for</font></b> <font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> M<font color="#990000">;</font> i<font color="#990000">++)</font><font color="#FF0000">{</font>
+            sum1 <font color="#990000">+=</font> mat<font color="#990000">[</font>i<font color="#990000">][</font>i<font color="#990000">];</font>
+            sum2 <font color="#990000">+=</font> mat<font color="#990000">[</font>i<font color="#990000">][</font>M<font color="#990000">-</font><font color="#993399">1</font><font color="#990000">-</font>i<font color="#990000">];</font>
+        <font color="#FF0000">}</font>
+
+        <b><font color="#0000FF">if</font></b><font color="#990000">(</font>sum1<font color="#990000">!=</font>sum2<font color="#990000">)</font> flag <font color="#990000">=</font> <b><font color="#0000FF">true</font></b><font color="#990000">;</font> 
+        <b><font color="#0000FF">for</font></b> <font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> M<font color="#990000">;</font> i<font color="#990000">++)</font> <font color="#FF0000">{</font>
+
+            <font color="#009900">int</font> rowSum <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">,</font> colSum <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font>
+
+            <b><font color="#0000FF">for</font></b> <font color="#990000">(</font><font color="#009900">int</font> j <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> j <font color="#990000">&lt;</font> M<font color="#990000">;</font> j<font color="#990000">++)</font><font color="#FF0000">{</font>
+                 rowSum <font color="#990000">+=</font> mat<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">];</font>
+                 colSum <font color="#990000">+=</font> mat<font color="#990000">[</font>j<font color="#990000">][</font>i<font color="#990000">];</font>
+            <font color="#FF0000">}</font>
+
+            <b><font color="#0000FF">if</font></b> <font color="#990000">(</font>rowSum <font color="#990000">!=</font> colSum <font color="#990000">||</font> colSum <font color="#990000">!=</font> sum1<font color="#990000">)</font> flag <font color="#990000">=</font> <b><font color="#0000FF">true</font></b><font color="#990000">;</font> 
+        <font color="#FF0000">}</font>
+        <b><font color="#0000FF">if</font></b> <font color="#990000">(!</font>flag<font color="#990000">)</font>
+            System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Given matrix is a Magic Square"</font><font color="#990000">);</font>
+        <b><font color="#0000FF">else</font></b>
+            System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Given matrix is a not a magic"</font> <font color="#990000">+</font> <font color="#FF0000">" Square"</font><font color="#990000">);</font>
+       <font color="#FF0000">}</font>
+<font color="#FF0000">}</font>
+</tt></pre>

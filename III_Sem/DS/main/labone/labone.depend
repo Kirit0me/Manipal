@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1691208861 source:d:\220953384\labone\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1691211355 source:d:\220953384\labone\binarysearch.c
+	<stdio.h>
+
+1691211951 source:d:\220953384\labone\bubble.c
+	<stdio.h>
+
+1691212070 source:d:\220953384\labone\selection.c
+	<stdio.h>
+
+1691213983 source:d:\220953384\labone\recursives.c
+	<stdio.h>
+

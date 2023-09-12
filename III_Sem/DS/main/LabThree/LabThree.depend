@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1693023696 source:d:\220953384\labthree\paranthesis.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1693025783 source:d:\220953384\labthree\decimal.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
