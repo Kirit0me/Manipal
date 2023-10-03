@@ -1,0 +1,40 @@
+<!-- Generator: GNU source-highlight 3.1.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><i><font color="#9A1900">/*</font></i>
+<i><font color="#9A1900"> * Click </font></i><u><font color="#0000FF">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</font></u><i><font color="#9A1900"> to change this license</font></i>
+<i><font color="#9A1900"> * Click </font></i><u><font color="#0000FF">nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java</font></u><i><font color="#9A1900"> to edit this template</font></i>
+<i><font color="#9A1900"> */</font></i>
+<b><font color="#000080">package</font></b> lab5<font color="#990000">;</font>
+
+<i><font color="#9A1900">/**</font></i>
+<i><font color="#9A1900"> *</font></i>
+<i><font color="#9A1900"> * </font></i><font color="#009900">@author</font><i><font color="#9A1900"> student</font></i>
+<i><font color="#9A1900"> */</font></i>
+<b><font color="#0000FF">class</font></b> <font color="#008080">Employee</font><font color="#FF0000">{</font>
+    <font color="#008080">String</font> empName<font color="#990000">,</font> city<font color="#990000">;</font>
+    <font color="#009900">double</font> basic<font color="#990000">,</font> da<font color="#990000">,</font> hra<font color="#990000">,</font> total<font color="#990000">;</font>
+    <font color="#009900">void</font> <b><font color="#000000">getdata</font></b><font color="#990000">(</font><font color="#008080">String</font> a<font color="#990000">,</font> <font color="#008080">String</font> b<font color="#990000">,</font> <font color="#009900">double</font> c<font color="#990000">,</font> <font color="#009900">double</font> d<font color="#990000">,</font> <font color="#009900">double</font> e<font color="#990000">)</font><font color="#FF0000">{</font>
+        empName <font color="#990000">=</font> a<font color="#990000">;</font>
+        city <font color="#990000">=</font> b<font color="#990000">;</font>
+        basic <font color="#990000">=</font> c<font color="#990000">;</font>
+        da <font color="#990000">=</font> d<font color="#990000">;</font>
+        hra <font color="#990000">=</font> e<font color="#990000">;</font>
+    <font color="#FF0000">}</font>
+    <font color="#009900">void</font> <b><font color="#000000">calculate</font></b><font color="#990000">()</font><font color="#FF0000">{</font>
+        total <font color="#990000">=</font> basic <font color="#990000">+</font> basic<font color="#990000">*</font>da<font color="#990000">/</font><font color="#993399">100</font> <font color="#990000">+</font> basic<font color="#990000">*</font>hra<font color="#990000">/</font><font color="#993399">100</font><font color="#990000">;</font>
+    <font color="#FF0000">}</font>
+    <font color="#009900">void</font> <b><font color="#000000">display</font></b><font color="#990000">()</font><font color="#FF0000">{</font>
+        System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"The total salary of "</font> <font color="#990000">+</font> empName <font color="#990000">+</font> <font color="#FF0000">" is "</font> <font color="#990000">+</font> total<font color="#990000">);</font>
+    <font color="#FF0000">}</font>
+<font color="#FF0000">}</font>
+<b><font color="#0000FF">public</font></b> <b><font color="#0000FF">class</font></b> <font color="#008080">Maintwo</font> <font color="#FF0000">{</font>
+    <b><font color="#0000FF">public</font></b> <b><font color="#0000FF">static</font></b> <font color="#009900">void</font> <b><font color="#000000">main</font></b><font color="#990000">(</font>String<font color="#990000">[]</font> args<font color="#990000">)</font> <font color="#FF0000">{</font>
+        <font color="#008080">Employee</font> e1 <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <b><font color="#000000">Employee</font></b><font color="#990000">();</font>
+        e1<font color="#990000">.</font><b><font color="#000000">getdata</font></b><font color="#990000">(</font><font color="#FF0000">"Shreyas"</font><font color="#990000">,</font> <font color="#FF0000">"Bengaluru"</font><font color="#990000">,</font> <font color="#993399">100000.0</font><font color="#990000">,</font> <font color="#993399">20.0</font><font color="#990000">,</font> <font color="#993399">50.0</font><font color="#990000">);</font>
+        e1<font color="#990000">.</font><b><font color="#000000">calculate</font></b><font color="#990000">();</font>
+        e1<font color="#990000">.</font><b><font color="#000000">display</font></b><font color="#990000">();</font>
+    <font color="#FF0000">}</font>
+<font color="#FF0000">}</font>
+</tt></pre>

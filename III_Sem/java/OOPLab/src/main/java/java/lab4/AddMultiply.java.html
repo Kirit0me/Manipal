@@ -1,0 +1,102 @@
+<!-- Generator: GNU source-highlight 3.1.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><i><font color="#9A1900">/*</font></i>
+<i><font color="#9A1900"> * Click </font></i><u><font color="#0000FF">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</font></u><i><font color="#9A1900"> to change this license</font></i>
+<i><font color="#9A1900"> * Click </font></i><u><font color="#0000FF">nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java</font></u><i><font color="#9A1900"> to edit this template</font></i>
+<i><font color="#9A1900"> */</font></i>
+<b><font color="#000080">package</font></b> lab4<font color="#990000">;</font>
+
+<b><font color="#000080">import</font></b> java<font color="#990000">.</font>util<font color="#990000">.</font>Scanner<font color="#990000">;</font>
+
+<i><font color="#9A1900">/**</font></i>
+<i><font color="#9A1900"> *</font></i>
+<i><font color="#9A1900"> * </font></i><font color="#009900">@author</font><i><font color="#9A1900"> student</font></i>
+<i><font color="#9A1900"> */</font></i>
+<b><font color="#0000FF">public</font></b> <b><font color="#0000FF">class</font></b> <font color="#008080">AddMultiply</font> <font color="#FF0000">{</font>
+    <b><font color="#0000FF">public</font></b> <b><font color="#0000FF">static</font></b> <font color="#009900">void</font> <b><font color="#000000">main</font></b><font color="#990000">(</font>String<font color="#990000">[]</font> args<font color="#990000">)</font> <font color="#FF0000">{</font>
+        <font color="#008080">Scanner</font> sc <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <b><font color="#000000">Scanner</font></b><font color="#990000">(</font>System<font color="#990000">.</font>in<font color="#990000">);</font>
+        System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Enter dimensions of array1 : "</font><font color="#990000">);</font>
+        <font color="#009900">int</font> m <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+        <font color="#009900">int</font> n <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+        System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Enter dimensions of array2 : "</font><font color="#990000">);</font>
+        <font color="#009900">int</font> p <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+        <font color="#009900">int</font> o <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+        System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Press 1 for Multiply and 2 for add"</font><font color="#990000">);</font>
+        <font color="#009900">int</font> choice <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+        <b><font color="#0000FF">if</font></b><font color="#990000">(</font>choice <font color="#990000">==</font> <font color="#993399">1</font><font color="#990000">)</font><font color="#FF0000">{</font>
+            <b><font color="#0000FF">if</font></b><font color="#990000">(</font>p<font color="#990000">==</font>n<font color="#990000">)</font><font color="#FF0000">{</font>
+
+                <font color="#009900">int</font> arr1<font color="#990000">[][]</font> <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">int</font><font color="#990000">[</font>m<font color="#990000">][</font>n<font color="#990000">];</font>
+                <font color="#009900">int</font> arr2<font color="#990000">[][]</font> <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">int</font><font color="#990000">[</font>n<font color="#990000">][</font>o<font color="#990000">];</font>
+                System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Enter elements of array1 : "</font><font color="#990000">);</font>
+                <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> m<font color="#990000">;</font> i<font color="#990000">++)</font><font color="#FF0000">{</font>
+                    <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> j <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> j <font color="#990000">&lt;</font> n<font color="#990000">;</font> j<font color="#990000">++)</font><font color="#FF0000">{</font>
+                        arr1<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">]</font> <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+                    <font color="#FF0000">}</font>
+                <font color="#FF0000">}</font>
+                System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Enter elements of array2 : "</font><font color="#990000">);</font>
+                <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> n<font color="#990000">;</font> i<font color="#990000">++)</font><font color="#FF0000">{</font>
+                    <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> j <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> j <font color="#990000">&lt;</font> o<font color="#990000">;</font> j<font color="#990000">++)</font><font color="#FF0000">{</font>
+                        arr2<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">]</font> <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+                    <font color="#FF0000">}</font>
+                <font color="#FF0000">}</font>
+                <font color="#009900">int</font> c<font color="#990000">[][]</font> <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">int</font><font color="#990000">[</font>m<font color="#990000">][</font>o<font color="#990000">];</font>
+                <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i<font color="#990000">&lt;</font> m<font color="#990000">;</font>i<font color="#990000">++)</font><font color="#FF0000">{</font>
+                    <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> j <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> j <font color="#990000">&lt;</font> o<font color="#990000">;</font> j<font color="#990000">++)</font><font color="#FF0000">{</font>
+                        c<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">]</font> <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font>
+                        <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> k <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> k <font color="#990000">&lt;</font> n<font color="#990000">;</font> k<font color="#990000">++)</font><font color="#FF0000">{</font>
+                            c<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">]</font> <font color="#990000">=</font> arr1<font color="#990000">[</font>i<font color="#990000">][</font>k<font color="#990000">]*</font>arr2<font color="#990000">[</font>k<font color="#990000">][</font>j<font color="#990000">];</font>
+                        <font color="#FF0000">}</font>
+                    <font color="#FF0000">}</font>
+                <font color="#FF0000">}</font>
+                System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Matrix Mult: "</font><font color="#990000">);</font>
+                <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font><font color="#990000">[]</font> row <font color="#990000">:</font> c<font color="#990000">)</font> <font color="#FF0000">{</font>
+                    <b><font color="#0000FF">for</font></b> <font color="#990000">(</font><font color="#009900">int</font> column <font color="#990000">:</font> row<font color="#990000">)</font> <font color="#FF0000">{</font>
+                        System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">print</font></b><font color="#990000">(</font>column <font color="#990000">+</font> <font color="#FF0000">"</font><font color="#CC33CC">\t</font><font color="#FF0000">"</font><font color="#990000">);</font>
+                    <font color="#FF0000">}</font>
+                    System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">();</font>
+               <font color="#FF0000">}</font>
+            <font color="#FF0000">}</font>
+            <b><font color="#0000FF">else</font></b><font color="#FF0000">{</font>
+                System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Give valid dimensions"</font><font color="#990000">);</font>
+            <font color="#FF0000">}</font>
+        <font color="#FF0000">}</font>
+        <b><font color="#0000FF">if</font></b><font color="#990000">(</font>choice <font color="#990000">==</font> <font color="#993399">2</font><font color="#990000">)</font><font color="#FF0000">{</font>
+            <b><font color="#0000FF">if</font></b><font color="#990000">(</font>m <font color="#990000">==</font> p <font color="#990000">&amp;&amp;</font> n <font color="#990000">==</font> o<font color="#990000">)</font><font color="#FF0000">{</font>
+                <font color="#009900">int</font> arr1<font color="#990000">[][]</font> <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">int</font><font color="#990000">[</font>m<font color="#990000">][</font>n<font color="#990000">];</font>
+                <font color="#009900">int</font> arr2<font color="#990000">[][]</font> <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">int</font><font color="#990000">[</font>m<font color="#990000">][</font>n<font color="#990000">];</font>
+                System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Enter elements of array1 : "</font><font color="#990000">);</font>
+                <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> m<font color="#990000">;</font> i<font color="#990000">++)</font><font color="#FF0000">{</font>
+                    <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> j <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> j <font color="#990000">&lt;</font> n<font color="#990000">;</font> j<font color="#990000">++)</font><font color="#FF0000">{</font>
+                        arr1<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">]</font> <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+                    <font color="#FF0000">}</font>
+                <font color="#FF0000">}</font>
+                System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Enter elements of array2 : "</font><font color="#990000">);</font>
+                <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> m<font color="#990000">;</font> i<font color="#990000">++)</font><font color="#FF0000">{</font>
+                    <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> j <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> j <font color="#990000">&lt;</font> n<font color="#990000">;</font> j<font color="#990000">++)</font><font color="#FF0000">{</font>
+                        arr2<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">]</font> <font color="#990000">=</font> sc<font color="#990000">.</font><b><font color="#000000">nextInt</font></b><font color="#990000">();</font>
+                    <font color="#FF0000">}</font>
+                <font color="#FF0000">}</font>
+                <font color="#009900">int</font> sumarr<font color="#990000">[][]</font> <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <font color="#009900">int</font><font color="#990000">[</font>m<font color="#990000">][</font>n<font color="#990000">];</font>
+                <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> m<font color="#990000">;</font> i<font color="#990000">++)</font><font color="#FF0000">{</font>
+                    <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> j <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font> j <font color="#990000">&lt;</font> n<font color="#990000">;</font> j<font color="#990000">++)</font><font color="#FF0000">{</font>
+                        sumarr<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">]</font> <font color="#990000">=</font> arr1<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">]</font> <font color="#990000">+</font> arr2<font color="#990000">[</font>i<font color="#990000">][</font>j<font color="#990000">];</font>
+                    <font color="#FF0000">}</font>
+                <font color="#FF0000">}</font>
+                System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Matrix Add: "</font><font color="#990000">);</font>
+                <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font><font color="#990000">[]</font> row <font color="#990000">:</font> sumarr<font color="#990000">)</font> <font color="#FF0000">{</font>
+                    <b><font color="#0000FF">for</font></b> <font color="#990000">(</font><font color="#009900">int</font> column <font color="#990000">:</font> row<font color="#990000">)</font> <font color="#FF0000">{</font>
+                        System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">print</font></b><font color="#990000">(</font>column <font color="#990000">+</font> <font color="#FF0000">"</font><font color="#CC33CC">\t</font><font color="#FF0000">"</font><font color="#990000">);</font>
+                    <font color="#FF0000">}</font>
+                    System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">();</font>
+               <font color="#FF0000">}</font>
+            <font color="#FF0000">}</font>
+            <b><font color="#0000FF">else</font></b><font color="#FF0000">{</font>
+                System<font color="#990000">.</font>out<font color="#990000">.</font><b><font color="#000000">println</font></b><font color="#990000">(</font><font color="#FF0000">"Give valid dimensions"</font><font color="#990000">);</font>
+            <font color="#FF0000">}</font>
+        <font color="#FF0000">}</font>
+    <font color="#FF0000">}</font>
+<font color="#FF0000">}</font>
+</tt></pre>

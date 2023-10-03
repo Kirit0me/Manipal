@@ -1,0 +1,83 @@
+<!-- Generator: GNU source-highlight 3.1.9
+by Lorenzo Bettini
+http://www.lorenzobettini.it
+http://www.gnu.org/software/src-highlite -->
+<pre><tt><i><font color="#9A1900">/*</font></i>
+<i><font color="#9A1900"> * Click </font></i><u><font color="#0000FF">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</font></u><i><font color="#9A1900"> to change this license</font></i>
+<i><font color="#9A1900"> * Click </font></i><u><font color="#0000FF">nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java</font></u><i><font color="#9A1900"> to edit this template</font></i>
+<i><font color="#9A1900"> */</font></i>
+<b><font color="#000080">package</font></b> lab5<font color="#990000">;</font>
+
+<i><font color="#9A1900">/**</font></i>
+<i><font color="#9A1900"> *</font></i>
+<i><font color="#9A1900"> * </font></i><font color="#009900">@author</font><i><font color="#9A1900"> student</font></i>
+<i><font color="#9A1900"> */</font></i>
+<b><font color="#000080">import</font></b> java<font color="#990000">.</font>lang<font color="#990000">.*;</font>
+<b><font color="#0000FF">class</font></b> <font color="#008080">Number</font><font color="#FF0000">{</font>
+    <b><font color="#0000FF">private</font></b> <font color="#009900">double</font> num<font color="#990000">;</font>
+    <b><font color="#000000">Number</font></b> <font color="#990000">()</font> <font color="#FF0000">{}</font>
+    <b><font color="#000000">Number</font></b><font color="#990000">(</font><font color="#009900">double</font> num<font color="#990000">)</font><font color="#FF0000">{</font>
+        <b><font color="#0000FF">this</font></b><font color="#990000">.</font>num <font color="#990000">=</font>  num<font color="#990000">;</font>
+    <font color="#FF0000">}</font>
+    <font color="#009900">boolean</font> <b><font color="#000000">isZero</font></b><font color="#990000">()</font><font color="#FF0000">{</font>
+        <b><font color="#0000FF">if</font></b><font color="#990000">(</font>num <font color="#990000">==</font> <font color="#993399">0</font><font color="#990000">)</font><font color="#FF0000">{</font>
+            <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">true</font></b><font color="#990000">;</font>
+        <font color="#FF0000">}</font>
+        <b><font color="#0000FF">else</font></b> <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">false</font></b><font color="#990000">;</font>
+    <font color="#FF0000">}</font>
+    <font color="#009900">boolean</font> <b><font color="#000000">isPositive</font></b><font color="#990000">()</font><font color="#FF0000">{</font>
+        <b><font color="#0000FF">if</font></b><font color="#990000">(</font>num <font color="#990000">&gt;</font> <font color="#993399">0</font><font color="#990000">)</font><font color="#FF0000">{</font>
+            <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">true</font></b><font color="#990000">;</font>
+        <font color="#FF0000">}</font>
+        <b><font color="#0000FF">else</font></b> <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">false</font></b><font color="#990000">;</font>
+    <font color="#FF0000">}</font>
+    <font color="#009900">boolean</font> <b><font color="#000000">isNegative</font></b><font color="#990000">()</font><font color="#FF0000">{</font>
+        <b><font color="#0000FF">if</font></b><font color="#990000">(</font>num <font color="#990000">&lt;</font> <font color="#993399">0</font><font color="#990000">)</font><font color="#FF0000">{</font>
+            <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">true</font></b><font color="#990000">;</font>
+        <font color="#FF0000">}</font>
+        <b><font color="#0000FF">else</font></b> <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">false</font></b><font color="#990000">;</font>
+    <font color="#FF0000">}</font>
+    <font color="#009900">boolean</font> <b><font color="#000000">isOdd</font></b><font color="#990000">()</font><font color="#FF0000">{</font>
+        <b><font color="#0000FF">if</font></b><font color="#990000">(</font>num<font color="#990000">%</font><font color="#993399">2</font> <font color="#990000">!=</font> <font color="#993399">0</font><font color="#990000">)</font><font color="#FF0000">{</font>
+            <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">true</font></b><font color="#990000">;</font>
+        <font color="#FF0000">}</font>
+        <b><font color="#0000FF">else</font></b> <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">false</font></b><font color="#990000">;</font>
+    <font color="#FF0000">}</font>
+    <font color="#009900">boolean</font> <b><font color="#000000">isEven</font></b><font color="#990000">()</font><font color="#FF0000">{</font>
+        <b><font color="#0000FF">if</font></b><font color="#990000">(</font>num<font color="#990000">%</font><font color="#993399">2</font> <font color="#990000">==</font> <font color="#993399">0</font><font color="#990000">)</font><font color="#FF0000">{</font>
+            
+            <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">true</font></b><font color="#990000">;</font>
+        <font color="#FF0000">}</font>
+        <b><font color="#0000FF">else</font></b> <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">false</font></b><font color="#990000">;</font>
+    <font color="#FF0000">}</font>
+    <font color="#009900">boolean</font> <b><font color="#000000">isPrime</font></b><font color="#990000">()</font><font color="#FF0000">{</font>
+        <b><font color="#0000FF">for</font></b><font color="#990000">(</font><font color="#009900">int</font> i <font color="#990000">=</font> <font color="#993399">2</font><font color="#990000">;</font> i <font color="#990000">&lt;</font> num<font color="#990000">;</font> i<font color="#990000">++)</font><font color="#FF0000">{</font>
+            <b><font color="#0000FF">if</font></b><font color="#990000">(</font>num<font color="#990000">%</font>i<font color="#990000">==</font><font color="#993399">0</font><font color="#990000">)</font> <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">false</font></b><font color="#990000">;</font>
+        <font color="#FF0000">}</font>
+        <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">true</font></b><font color="#990000">;</font>
+    <font color="#FF0000">}</font>
+    <font color="#009900">boolean</font> <b><font color="#000000">isArmstrong</font></b><font color="#990000">()</font><font color="#FF0000">{</font>
+        <font color="#009900">int</font> astrong <font color="#990000">=</font> <font color="#990000">(</font><font color="#009900">int</font><font color="#990000">)</font>num<font color="#990000">;</font>
+        num <font color="#990000">=</font> <font color="#990000">(</font><font color="#009900">int</font><font color="#990000">)</font>num<font color="#990000">;</font>
+        <font color="#009900">int</font> c <font color="#990000">=</font> <font color="#993399">0</font><font color="#990000">;</font>
+        <b><font color="#0000FF">while</font></b> <font color="#990000">(</font>num<font color="#990000">!=</font><font color="#993399">0</font><font color="#990000">)</font><font color="#FF0000">{</font>
+            c <font color="#990000">+=</font> Math<font color="#990000">.</font><b><font color="#000000">pow</font></b><font color="#990000">(</font>num<font color="#990000">%</font><font color="#993399">10</font><font color="#990000">,</font> <font color="#993399">3</font><font color="#990000">);</font>
+            num <font color="#990000">=</font> num<font color="#990000">/</font><font color="#993399">10</font><font color="#990000">;</font>
+        <font color="#FF0000">}</font>
+        <b><font color="#0000FF">if</font></b><font color="#990000">(</font>astrong <font color="#990000">==</font> c<font color="#990000">)</font><font color="#FF0000">{</font>
+            <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">true</font></b><font color="#990000">;</font>
+        <font color="#FF0000">}</font> <b><font color="#0000FF">else</font></b> <font color="#FF0000">{</font>
+            <b><font color="#0000FF">return</font></b> <b><font color="#0000FF">false</font></b><font color="#990000">;</font>
+        <font color="#FF0000">}</font>
+    <font color="#FF0000">}</font>
+<font color="#FF0000">}</font>
+<b><font color="#0000FF">public</font></b> <b><font color="#0000FF">class</font></b> <font color="#008080">Mainfive</font> <font color="#FF0000">{</font>
+    <b><font color="#0000FF">public</font></b> <b><font color="#0000FF">static</font></b> <font color="#009900">void</font> <b><font color="#000000">main</font></b><font color="#990000">(</font>String<font color="#990000">[]</font> args<font color="#990000">)</font> <font color="#FF0000">{</font>
+        <font color="#008080">Number</font> n153 <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <b><font color="#000000">Number</font></b><font color="#990000">(</font><font color="#993399">153</font><font color="#990000">);</font>
+        <font color="#008080">Number</font> n2 <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <b><font color="#000000">Number</font></b><font color="#990000">(</font><font color="#993399">153.2</font><font color="#990000">);</font>
+        <font color="#008080">Number</font> n3 <font color="#990000">=</font> <b><font color="#0000FF">new</font></b> <b><font color="#000000">Number</font></b><font color="#990000">(</font><font color="#993399">13</font><font color="#990000">);</font>
+        <i><font color="#9A1900">//if(n3.isOdd) System.out.println("Idk why I am here");</font></i>
+    <font color="#FF0000">}</font>
+    
+<font color="#FF0000">}</font>
+</tt></pre>
