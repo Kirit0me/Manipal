@@ -11,7 +11,7 @@ import java.util.*;
 public class Main1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int ch=0, c=0, w=1, l=0, v=0;
+        int ch=0, c=0, w=1, l=1, v=0;
         String str = sc.nextLine();
         str = str.toLowerCase();
         ch = str.length();
@@ -29,6 +29,6 @@ public class Main1 {
                 l++;ch--;c--;
             }
         }
-        System.out.println("Stats: chars : " + ch + " vowels : " + v + " consonants : " + c + " words : " + w);
+        System.out.println("Stats:\n chars : " + ch + "\n vowels : " + v + "\n consonants : " + c + "\n words : " + w + " \n Lines : " + l);
     }
 }

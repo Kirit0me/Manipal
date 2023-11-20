@@ -10,47 +10,39 @@ package lab11;
  */
  
 // Main class
-public class Main4 extends Thread {
-    
+class Mythr extends Thread {
     @Override
-    public void run()
-    {
-        // Print statement
-        System.out.println("Inside run method");
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Thread " + Thread.currentThread().getName() + ": " + i);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                System.out.println("Thread " + Thread.currentThread().getName() + " was interrupted");
+                return; // Terminate the thread if interrupted
+            }
+        }
     }
- 
-    public static void main(String[] args)
-    {
-        ThreadDemo t1 = new ThreadDemo();
-        ThreadDemo t2 = new ThreadDemo();
-        ThreadDemo t3 = new ThreadDemo();
- 
-        t1.setPriority(2);
-        t2.setPriority(5);
-        t3.setPriority(8);
- 
-        System.out.println("t1 thread priority : "
-                           + t1.getPriority());
- 
-        System.out.println("t2 thread priority : "
-                           + t2.getPriority());
+}
 
-        System.out.println("t3 thread priority : "
-                           + t3.getPriority());
- 
+public class Main4 {
+    public static void main(String[] args) {
+        Mythr thread1 = new Mythr();
+        Mythr thread2 = new Mythr();
 
-        System.out.println(
-            "Currently Executing Thread : "
-            + Thread.currentThread().getName());
- 
-        System.out.println(
-            "Main thread priority : "
-            + Thread.currentThread().getPriority());
- 
-        Thread.currentThread().setPriority(10);
- 
-        System.out.println(
-            "Main thread priority : "
-            + Thread.currentThread().getPriority());
+        // Set priorities
+        thread1.setPriority(Thread.MIN_PRIORITY); // Set minimum priority
+        thread2.setPriority(Thread.MAX_PRIORITY); // Set maximum priority
+
+        thread1.start();
+        thread2.start();
+
+        try {
+            // Main thread waits for both threads to finish
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            System.out.println("Main thread was interrupted");
+        }
     }
 }
