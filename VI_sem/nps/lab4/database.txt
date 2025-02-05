@@ -1,0 +1,4 @@
+google.com 8.8.8.8
+yahoo.com 98.137.11.163
+example.com 93.184.216.34
+
