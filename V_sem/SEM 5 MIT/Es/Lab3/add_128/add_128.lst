@@ -1,0 +1,162 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 4811            LDR              R0, =N1
+   12 00000002 4912            LDR              R1, =N2
+   13 00000004 F8DF 9048       LDR              R9, =DST
+   14 00000008 F04F 0A04       MOV              R10, #4
+   15 0000000C         
+   16 0000000C F850 2B04 
+                       UP      LDR              R2, [R0], #4
+   17 00000010 F851 3B04       LDR              R3, [R1], #4
+   18 00000014 EB53 0502       ADCS             R5, R3, R2
+   19 00000018 F849 5B04       STR              R5, [R9], #4
+   20 0000001C F1AA 0A01       SUB              R10, #1
+   21 00000020 F09A 0F00       TEQ              R10, #00
+   22 00000024 D1F2            BNE              UP
+   23 00000026         
+   24 00000026         STOP
+   25 00000026 E7FE            B                STOP
+   26 00000028         
+   27 00000028 11111111 
+              11111111 
+              11111111 
+              11111111 N1      DCD              0x11111111, 0x11111111, 0x11111
+111, 0x11111111
+   28 00000038 22222222 
+              33334444 
+              44445555 
+              66778899 N2      DCD              0x22222222, 0x33334444, 0x44445
+555, 0x66778899
+   29 00000048 00000000 
+              00000000 
+              00000000         AREA             mydata, DATA, READWRITE
+   30 00000000 00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 DST     DCD              0, 0, 0, 0, 0, 0, 0, 0, 0
+                       
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=add_128.
+d -oadd_128.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\
+Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=add_128.lst add_128.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file add_128.asm
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file add_128.asm
+   Uses
+      At line 2 in file add_128.asm
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+N1 00000028
+
+Symbol: N1
+   Definitions
+      At line 27 in file add_128.asm
+   Uses
+      At line 11 in file add_128.asm
+Comment: N1 used once
+N2 00000038
+
+Symbol: N2
+   Definitions
+      At line 28 in file add_128.asm
+   Uses
+      At line 12 in file add_128.asm
+Comment: N2 used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file add_128.asm
+   Uses
+      At line 5 in file add_128.asm
+      At line 9 in file add_128.asm
+
+STOP 00000026
+
+Symbol: STOP
+   Definitions
+      At line 24 in file add_128.asm
+   Uses
+      At line 25 in file add_128.asm
+Comment: STOP used once
+UP 0000000C
+
+Symbol: UP
+   Definitions
+      At line 16 in file add_128.asm
+   Uses
+      At line 22 in file add_128.asm
+Comment: UP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file add_128.asm
+   Uses
+      None
+Comment: mycode unused
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 30 in file add_128.asm
+   Uses
+      At line 13 in file add_128.asm
+Comment: DST used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 29 in file add_128.asm
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+343 symbols in table

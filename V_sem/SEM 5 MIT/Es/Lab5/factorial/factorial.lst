@@ -1,0 +1,133 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 4805            LDR              R0, =N1
+   12 00000002 6801            LDR              R1, [R0]
+   13 00000004 F04F 0201       MOV              R2, #1
+   14 00000008         
+   15 00000008 FB02 F201 
+                       FA      MUL              R2, R2, R1
+   16 0000000C 3901            SUBS             R1, #1
+   17 0000000E 2901            CMP              R1, #1
+   18 00000010 DCFA            BGT              FA
+   19 00000012         STOP
+   20 00000012 E7FE            B                STOP
+   21 00000014         
+   22 00000014 00000005 
+                       N1      DCD              0x05
+   23 00000018 00000000        AREA             mydata, DATA, READWRITE
+   24 00000000 00000000 
+                       DST     DCD              0
+                       
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=factoria
+l.d -ofactorial.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\
+ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=factorial.lst factorial.
+asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file factorial.asm
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file factorial.asm
+   Uses
+      At line 2 in file factorial.asm
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FA 00000008
+
+Symbol: FA
+   Definitions
+      At line 15 in file factorial.asm
+   Uses
+      At line 18 in file factorial.asm
+Comment: FA used once
+N1 00000014
+
+Symbol: N1
+   Definitions
+      At line 22 in file factorial.asm
+   Uses
+      At line 11 in file factorial.asm
+Comment: N1 used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file factorial.asm
+   Uses
+      At line 5 in file factorial.asm
+      At line 9 in file factorial.asm
+
+STOP 00000012
+
+Symbol: STOP
+   Definitions
+      At line 19 in file factorial.asm
+   Uses
+      At line 20 in file factorial.asm
+Comment: STOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file factorial.asm
+   Uses
+      None
+Comment: mycode unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 24 in file factorial.asm
+   Uses
+      None
+Comment: DST unused
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 23 in file factorial.asm
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+342 symbols in table

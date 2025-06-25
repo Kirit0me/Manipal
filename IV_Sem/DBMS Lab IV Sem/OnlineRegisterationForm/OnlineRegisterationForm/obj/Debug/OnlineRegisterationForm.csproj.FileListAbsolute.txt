@@ -1,0 +1,9 @@
+D:\220953384\OnlineRegisterationForm\OnlineRegisterationForm\bin\Debug\OnlineRegisterationForm.exe.config
+D:\220953384\OnlineRegisterationForm\OnlineRegisterationForm\bin\Debug\OnlineRegisterationForm.exe
+D:\220953384\OnlineRegisterationForm\OnlineRegisterationForm\bin\Debug\OnlineRegisterationForm.pdb
+D:\220953384\OnlineRegisterationForm\OnlineRegisterationForm\obj\Debug\OnlineRegisterationForm.csprojResolveAssemblyReference.cache
+D:\220953384\OnlineRegisterationForm\OnlineRegisterationForm\obj\Debug\OnlineRegisterationForm.Form1.resources
+D:\220953384\OnlineRegisterationForm\OnlineRegisterationForm\obj\Debug\OnlineRegisterationForm.Properties.Resources.resources
+D:\220953384\OnlineRegisterationForm\OnlineRegisterationForm\obj\Debug\OnlineRegisterationForm.csproj.GenerateResource.Cache
+D:\220953384\OnlineRegisterationForm\OnlineRegisterationForm\obj\Debug\OnlineRegisterationForm.exe
+D:\220953384\OnlineRegisterationForm\OnlineRegisterationForm\obj\Debug\OnlineRegisterationForm.pdb

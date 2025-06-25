@@ -1,0 +1,117 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, DATA, READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         
+    4 00000000         __Vectors
+    5 00000000 10001000        DCD              0X10001000  ; Stack pointer val
+                                                            ue when stack is em
+                                                            pty
+    6 00000004 00000000        DCD              Reset_Handler ; Reset Vectors
+    7 00000008                 ALIGN
+    8 00000008                 AREA             mycode, CODE, READONLY
+    9 00000000                 ENTRY
+   10 00000000                 EXPORT           Reset_Handler
+   11 00000000         Reset_Handler
+   12 00000000 F04F 000A       MOV              R0, #10
+   13 00000004 F44F 1180       MOV              R1, #0X100000
+   14 00000008 4A06            LDR              R2, =0X1FFFF1
+   15 0000000A F06F 0302       MOV              R3, #-3
+   16 0000000E F04F 040A       MOV              R4, #2_1010
+   17 00000012 F04F 051E       MOV              R5, #3_1010
+   18 00000016         STOP
+   19 00000016 E7FE            B                STOP
+   20 00000018 0000000A 
+                       NUM     EQU              10
+   21 00000018 00000008 
+              00123456 
+              020F76D3 SRC     DCD              8, 0x123456, 34567891
+                       
+              001FFFF1 
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=more_hel
+lo_world.d -omore_hello_world.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Incl
+ude -IC:\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=more_hello
+_world.lst more_hello_world.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file more_hello_world.asm
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 4 in file more_hello_world.asm
+   Uses
+      At line 2 in file more_hello_world.asm
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 11 in file more_hello_world.asm
+   Uses
+      At line 6 in file more_hello_world.asm
+      At line 10 in file more_hello_world.asm
+
+SRC 00000018
+
+Symbol: SRC
+   Definitions
+      At line 21 in file more_hello_world.asm
+   Uses
+      None
+Comment: SRC unused
+STOP 00000016
+
+Symbol: STOP
+   Definitions
+      At line 18 in file more_hello_world.asm
+   Uses
+      At line 19 in file more_hello_world.asm
+Comment: STOP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 8 in file more_hello_world.asm
+   Uses
+      None
+Comment: mycode unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+NUM 0000000A
+
+Symbol: NUM
+   Definitions
+      At line 20 in file more_hello_world.asm
+   Uses
+      None
+Comment: NUM unused
+1 symbol
+340 symbols in table

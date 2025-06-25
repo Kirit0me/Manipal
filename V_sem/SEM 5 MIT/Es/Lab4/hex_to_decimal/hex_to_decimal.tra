@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'hex_to_decimal.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"hex_to_decimal.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "hex_to_decimal.o" 
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\hex_to_decimal.map" -o hex_to_decimal.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'hex_to_decimal.axf'
+### ADS-LD Command File: 'hex_to_decimal.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'hex_to_decimal.lnp', Handle=0x00001448
+### Writing '.lnp' file
+### ADS-LD Command file 'hex_to_decimal.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

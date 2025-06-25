@@ -1,0 +1,2 @@
+Dependencies for Project 'memory_transfer', Target 'Target 1': (DO NOT MODIFY !)
+F (.\memory_transfer.asm)(0x66A8B67A)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "memory_transfer.lst" --xref -o "memory_transfer.o" --depend "memory_transfer.d")

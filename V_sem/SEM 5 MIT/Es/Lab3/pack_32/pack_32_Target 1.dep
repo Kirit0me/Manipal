@@ -1,0 +1,2 @@
+Dependencies for Project 'pack_32', Target 'Target 1': (DO NOT MODIFY !)
+F (.\pack_32.asm)(0x66B1F63B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "pack_32.lst" --xref -o "pack_32.o" --depend "pack_32.d")

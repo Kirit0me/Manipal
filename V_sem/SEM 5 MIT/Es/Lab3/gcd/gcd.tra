@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'gcd.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"gcd.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "gcd.o" 
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\gcd.map" -o gcd.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'gcd.axf'
+### ADS-LD Command File: 'gcd.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'gcd.lnp', Handle=0x00000538
+### Writing '.lnp' file
+### ADS-LD Command file 'gcd.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

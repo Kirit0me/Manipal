@@ -1,0 +1,146 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 F04F 0408       MOV              R4, #8
+   12 00000004 4809            LDR              R0, =N1
+   13 00000006 F8DF A028       LDR              R10, =DST
+   14 0000000A 6801            LDR              R1, [R0]
+   15 0000000C         
+   16 0000000C F001 020F 
+                       UP      AND              R2, R1, #0x0F
+   17 00000010 2A0A            CMP              R2, #0x0A
+   18 00000012 BF28 3207       ADDCS            R2, #07
+   19 00000016 F102 0230       ADD              R2, #0x30
+   20 0000001A F84A 2B01       STR              R2, [R10], #1
+   21 0000001E EA4F 1111       LSR              R1, #4
+   22 00000022 3C01            SUBS             R4, #1
+   23 00000024 D1F2            BNE              UP
+   24 00000026         STOP
+   25 00000026 E7FE            B                STOP
+   26 00000028         
+   27 00000028 ABCD4321 
+                       N1      DCD              0xABCD4321
+   28 0000002C 00000000 
+              00000000         AREA             mydata, DATA, READWRITE
+   29 00000000 00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 DST     DCD              0, 0, 0, 0, 0, 0, 0, 0, 0
+                       
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=hex_to_a
+scii.d -ohex_to_ascii.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:
+\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=hex_to_ascii.lst h
+ex_to_ascii.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file hex_to_ascii.asm
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file hex_to_ascii.asm
+   Uses
+      At line 2 in file hex_to_ascii.asm
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+N1 00000028
+
+Symbol: N1
+   Definitions
+      At line 27 in file hex_to_ascii.asm
+   Uses
+      At line 12 in file hex_to_ascii.asm
+Comment: N1 used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file hex_to_ascii.asm
+   Uses
+      At line 5 in file hex_to_ascii.asm
+      At line 9 in file hex_to_ascii.asm
+
+STOP 00000026
+
+Symbol: STOP
+   Definitions
+      At line 24 in file hex_to_ascii.asm
+   Uses
+      At line 25 in file hex_to_ascii.asm
+Comment: STOP used once
+UP 0000000C
+
+Symbol: UP
+   Definitions
+      At line 16 in file hex_to_ascii.asm
+   Uses
+      At line 23 in file hex_to_ascii.asm
+Comment: UP used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file hex_to_ascii.asm
+   Uses
+      None
+Comment: mycode unused
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 29 in file hex_to_ascii.asm
+   Uses
+      At line 13 in file hex_to_ascii.asm
+Comment: DST used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 28 in file hex_to_ascii.asm
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+342 symbols in table

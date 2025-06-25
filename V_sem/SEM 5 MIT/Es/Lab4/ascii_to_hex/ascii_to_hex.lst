@@ -1,0 +1,178 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET,DATA,READONLY
+    2 00000000                 EXPORT           __Vectors
+    3 00000000         __Vectors
+    4 00000000 10001000        DCD              0x10001000
+    5 00000004 00000000        DCD              Reset_Handler
+    6 00000008                 ALIGN
+    7 00000008                 AREA             mycode,CODE,READONLY
+    8 00000000                 ENTRY
+    9 00000000                 EXPORT           Reset_Handler
+   10 00000000         Reset_Handler
+   11 00000000 F04F 0404       MOV              R4, #4
+   12 00000004 4815            LDR              R0, =N1
+   13 00000006 F8DF A058       LDR              R10, =DST
+   14 0000000A 6801            LDR              R1, [R0]
+   15 0000000C         
+   16 0000000C F001 02FF 
+                       UP      AND              R2, R1, #0xFF
+   17 00000010 2A40            CMP              R2, #0x40
+   18 00000012 BF88 3A07       SUBHI            R2, #07
+   19 00000016 F1A2 0230       SUB              R2, #0x30
+   20 0000001A 4415            ADD              R5, R2
+   21 0000001C EA4F 7535       ROR              R5, #28
+   22 00000020 EA4F 2111       LSR              R1, #8
+   23 00000024 3C01            SUBS             R4, #1
+   24 00000026 D1F1            BNE              UP
+   25 00000028         
+   26 00000028 6841            LDR              R1, [R0, #4]
+   27 0000002A F04F 0404       MOV              R4, #4
+   28 0000002E         
+   29 0000002E F001 02FF 
+                       UP2     AND              R2, R1, #0xFF
+   30 00000032 2A40            CMP              R2, #0x40
+   31 00000034 BF88 3A07       SUBHI            R2, #07
+   32 00000038 F1A2 0230       SUB              R2, #0x30
+   33 0000003C 4415            ADD              R5, R2
+   34 0000003E EA4F 7535       ROR              R5, #28
+   35 00000042 EA4F 2111       LSR              R1, #8
+   36 00000046 3C01            SUBS             R4, #1
+   37 00000048 D1F1            BNE              UP2
+   38 0000004A         
+   39 0000004A EA4F 1535       ROR              R5, #4
+   40 0000004E F8CA 5000       STR              R5, [R10]
+   41 00000052         STOP
+   42 00000052 E7FE            B                STOP
+   43 00000054         
+   44 00000054 31433839 
+              45303236 N1      DCD              0x31433839, 0x45303236
+   45 0000005C 00000000 
+              00000000         AREA             mydata, DATA, READWRITE
+   46 00000000 00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000000 DST     DCD              0, 0, 0, 0, 0, 0, 0, 0, 0
+                       
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=ascii_to
+_hex.d -oascii_to_hex.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:
+\Keil\ARM\Inc\NXP\LPC17xx --predefine="__EVAL SETA 1" --list=ascii_to_hex.lst a
+scii_to_hex.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file ascii_to_hex.asm
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 3 in file ascii_to_hex.asm
+   Uses
+      At line 2 in file ascii_to_hex.asm
+Comment: __Vectors used once
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+N1 00000054
+
+Symbol: N1
+   Definitions
+      At line 44 in file ascii_to_hex.asm
+   Uses
+      At line 12 in file ascii_to_hex.asm
+Comment: N1 used once
+Reset_Handler 00000000
+
+Symbol: Reset_Handler
+   Definitions
+      At line 10 in file ascii_to_hex.asm
+   Uses
+      At line 5 in file ascii_to_hex.asm
+      At line 9 in file ascii_to_hex.asm
+
+STOP 00000052
+
+Symbol: STOP
+   Definitions
+      At line 41 in file ascii_to_hex.asm
+   Uses
+      At line 42 in file ascii_to_hex.asm
+Comment: STOP used once
+UP 0000000C
+
+Symbol: UP
+   Definitions
+      At line 16 in file ascii_to_hex.asm
+   Uses
+      At line 24 in file ascii_to_hex.asm
+Comment: UP used once
+UP2 0000002E
+
+Symbol: UP2
+   Definitions
+      At line 29 in file ascii_to_hex.asm
+   Uses
+      At line 37 in file ascii_to_hex.asm
+Comment: UP2 used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 7 in file ascii_to_hex.asm
+   Uses
+      None
+Comment: mycode unused
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DST 00000000
+
+Symbol: DST
+   Definitions
+      At line 46 in file ascii_to_hex.asm
+   Uses
+      At line 13 in file ascii_to_hex.asm
+Comment: DST used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 45 in file ascii_to_hex.asm
+   Uses
+      None
+Comment: mydata unused
+2 symbols
+343 symbols in table

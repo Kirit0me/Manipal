@@ -1,0 +1,21 @@
+*** Creating Trace Output File 'Up_Down_Counter.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"startup_lpc17xx.o"'
+### List of Objects: adding '"up_down_counter.o"'
+### List of Objects: adding '"system_lpc17xx.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "startup_lpc17xx.o" "up_down_counter.o" "system_lpc17xx.o" 
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Up_Down_Counter.map" -o Up_Down_Counter.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'Up_Down_Counter.axf'
+### ADS-LD Command File: 'Up_Down_Counter.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'Up_Down_Counter.lnp', Handle=0x00001798
+### Writing '.lnp' file
+### ADS-LD Command file 'Up_Down_Counter.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

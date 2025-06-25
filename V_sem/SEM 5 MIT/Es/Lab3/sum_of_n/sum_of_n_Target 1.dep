@@ -1,0 +1,2 @@
+Dependencies for Project 'sum_of_n', Target 'Target 1': (DO NOT MODIFY !)
+F (.\sum_of_n.asm)(0x66B1F15D)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\NXP\LPC17xx --list "sum_of_n.lst" --xref -o "sum_of_n.o" --depend "sum_of_n.d")
